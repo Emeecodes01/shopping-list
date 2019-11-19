@@ -9,4 +9,6 @@ abstract class ActivityBuilder {
 
     @ContributesAndroidInjector
     abstract fun provideSplashActivityInjector(): SplashActivity
+
+
 }

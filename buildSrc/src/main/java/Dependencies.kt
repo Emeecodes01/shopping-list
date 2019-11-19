@@ -31,6 +31,8 @@ object Dependencies {
 
     object UIDependency {
         val androidConstraintLayoutDep = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
+        val googleMaterialDesign = "com.google.android.material:material:${Versions.googleMaterialVersion}"
+        val recyclerView = "androidx.recyclerview:recyclerview:${Versions.googleMaterialVersion}"
     }
 
     object Dagger2 {
@@ -58,6 +60,11 @@ object Dependencies {
         val mockitoDep = "org.mockito:mockito-core:${Versions.mockitoVersion}"
         val roomDbTestHelper = "androidx.room:room-testing:${Versions.roomVersion}"
         val liveDataTestHelper = "androidx.arch.core:core-testing:${Versions.liveDataViewModel}"
+        val couroutineTestDep = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutineTestVersion}"
+    }
+
+    object DevTools{
+        val stethoDep = "com.facebook.stetho:stetho:${Versions.stethoVersion}"
     }
 
 }
@@ -76,6 +83,8 @@ fun DependencyHandler.androidDep() {
 fun DependencyHandler.UILibraries() {
     add("implementation", Dependencies.UIDependency.androidConstraintLayoutDep)
     add("implementation", Dependencies.ImageLoadingLibraries.glideLib)
+    add("implementation", Dependencies.UIDependency.googleMaterialDesign)
+    add("implementation", Dependencies.UIDependency.recyclerView)
     add("kapt", Dependencies.ImageLoadingLibraries.glideProcessor)
 }
 
@@ -102,11 +111,14 @@ fun DependencyHandler.TestDependencies() {
     add("testImplementation", Dependencies.TestDependencies.mockitoDep)
     add("testImplementation", Dependencies.TestDependencies.roomDbTestHelper)
     add("testImplementation", Dependencies.TestDependencies.liveDataTestHelper)
+    add("testImplementation", Dependencies.TestDependencies.couroutineTestDep)
     add("androidTestImplementation", Dependencies.TestDependencies.androidJunitTestDep)
     add("androidTestImplementation", Dependencies.TestDependencies.androidEspressoTestDep)
 }
 
-
+fun DependencyHandler.DevTools() {
+    add("implementation", Dependencies.DevTools.stethoDep)
+}
 
 fun DependencyHandler.appDependency() {
     androidDep()
@@ -114,5 +126,6 @@ fun DependencyHandler.appDependency() {
     kotlinCoroutines()
     ArchComponents()
     DI()
+    DevTools()
     TestDependencies()
 }

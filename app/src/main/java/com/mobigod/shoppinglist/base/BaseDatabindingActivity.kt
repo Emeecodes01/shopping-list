@@ -12,6 +12,7 @@ abstract class BaseDatabindingActivity<T: ViewDataBinding>(): AppCompatActivity(
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        preLayoutInit()
         performLayoutBinding()
 
         initComponents()
@@ -26,6 +27,7 @@ abstract class BaseDatabindingActivity<T: ViewDataBinding>(): AppCompatActivity(
     abstract fun getLayoutRes(): Int
 
     abstract fun initComponents()
+    abstract fun preLayoutInit()
 
     fun getBinding(): T = viewDataBinding
 

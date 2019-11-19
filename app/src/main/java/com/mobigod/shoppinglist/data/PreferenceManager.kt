@@ -4,13 +4,13 @@ import android.content.SharedPreferences
 
 class PreferenceManager(val sharedPreferences: SharedPreferences){
 
-    var isFirstTime: Boolean = false
+    var isFirstTime: Boolean = true
     set(value) {
         field = value
         sharedPreferences.edit().putBoolean(FIRST_TIME_KEY, value).apply()
     }
     get() {
-        return sharedPreferences.getBoolean(FIRST_TIME_KEY, false)
+        return sharedPreferences.getBoolean(FIRST_TIME_KEY, true)
     }
 
 

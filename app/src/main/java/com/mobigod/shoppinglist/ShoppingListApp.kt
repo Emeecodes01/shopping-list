@@ -1,6 +1,7 @@
 package com.mobigod.shoppinglist
 
 import android.app.Application
+import com.facebook.stetho.Stetho
 import com.mobigod.shoppinglist.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -20,11 +21,14 @@ class ShoppingListApp: Application(), HasAndroidInjector {
     override fun onCreate() {
         super.onCreate()
 
+        //Init Stetho
+        Stetho.initializeWithDefaults(this)
+
         //Inject android here
         DaggerAppComponent
             .builder()
             .application(this)
             .build()
-
     }
+
 }

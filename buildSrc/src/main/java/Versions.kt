@@ -12,4 +12,7 @@ object Versions {
     const val daggerVersion = "2.25.2"
     const val liveDataViewModel = "2.1.0"
     const val roomVersion = "2.2.1"
+    const val stethoVersion = "1.5.1"
+    const val googleMaterialVersion = "1.0.0"
+    const val coroutineTestVersion = "1.3.2"
 }
