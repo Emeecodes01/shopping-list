@@ -4,7 +4,7 @@
             "outputFile": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/2cd32b51be08d95ede78704decc1a6eb/appcompat-1.1.0/res/values-v24/values-v24.xml",
+                    "source": "/Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/aeffde13a8d0566779c93d66394e3c69/appcompat-1.1.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

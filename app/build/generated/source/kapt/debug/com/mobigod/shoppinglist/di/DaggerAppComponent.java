@@ -2,24 +2,75 @@
 package com.mobigod.shoppinglist.di;
 
 import android.app.Application;
+import android.content.Context;
+import android.content.SharedPreferences;
 import com.mobigod.shoppinglist.ShoppingListApp;
+import com.mobigod.shoppinglist.ShoppingListApp_MembersInjector;
+import com.mobigod.shoppinglist.SplashActivity;
+import com.mobigod.shoppinglist.SplashActivity_MembersInjector;
+import com.mobigod.shoppinglist.data.PreferenceManager;
+import dagger.android.AndroidInjector;
+import dagger.android.DispatchingAndroidInjector;
+import dagger.android.DispatchingAndroidInjector_Factory;
+import dagger.internal.DoubleCheck;
+import dagger.internal.InstanceFactory;
 import dagger.internal.Preconditions;
+import java.util.Collections;
+import java.util.Map;
+import javax.inject.Provider;
 
 @SuppressWarnings({
     "unchecked",
     "rawtypes"
 })
 public final class DaggerAppComponent implements AppComponent {
-  private DaggerAppComponent(Application application) {
+  private Provider<ActivityBuilder_ProvideSplashActivityInjector.SplashActivitySubcomponent.Factory> splashActivitySubcomponentFactoryProvider;
 
+  private Provider<Application> applicationProvider;
+
+  private Provider<Context> provideContextProvider;
+
+  private Provider<SharedPreferences> provideSharedPrefProvider;
+
+  private Provider<PreferenceManager> providePreferenceManagerProvider;
+
+  private DaggerAppComponent(AppModule appModuleParam, Application applicationParam) {
+
+    initialize(appModuleParam, applicationParam);
   }
 
   public static AppComponent.Builder builder() {
     return new Builder();
   }
 
+  private Map<Class<?>, Provider<AndroidInjector.Factory<?>>> getMapOfClassOfAndProviderOfAndroidInjectorFactoryOf(
+      ) {
+    return Collections.<Class<?>, Provider<AndroidInjector.Factory<?>>>singletonMap(SplashActivity.class, (Provider) splashActivitySubcomponentFactoryProvider);}
+
+  private DispatchingAndroidInjector<Object> getDispatchingAndroidInjectorOfObject() {
+    return DispatchingAndroidInjector_Factory.newInstance(getMapOfClassOfAndProviderOfAndroidInjectorFactoryOf(), Collections.<String, Provider<AndroidInjector.Factory<?>>>emptyMap());}
+
+  @SuppressWarnings("unchecked")
+  private void initialize(final AppModule appModuleParam, final Application applicationParam) {
+    this.splashActivitySubcomponentFactoryProvider = new Provider<ActivityBuilder_ProvideSplashActivityInjector.SplashActivitySubcomponent.Factory>() {
+      @Override
+      public ActivityBuilder_ProvideSplashActivityInjector.SplashActivitySubcomponent.Factory get(
+          ) {
+        return new SplashActivitySubcomponentFactory();}
+    };
+    this.applicationProvider = InstanceFactory.create(applicationParam);
+    this.provideContextProvider = DoubleCheck.provider(AppModule_ProvideContextFactory.create(appModuleParam, applicationProvider));
+    this.provideSharedPrefProvider = DoubleCheck.provider(AppModule_ProvideSharedPrefFactory.create(appModuleParam, provideContextProvider));
+    this.providePreferenceManagerProvider = DoubleCheck.provider(AppModule_ProvidePreferenceManagerFactory.create(appModuleParam, provideSharedPrefProvider));
+  }
+
   @Override
   public void inject(ShoppingListApp app) {
+    injectShoppingListApp(app);}
+
+  private ShoppingListApp injectShoppingListApp(ShoppingListApp instance) {
+    ShoppingListApp_MembersInjector.injectActivityDispatchingAndroidInjector(instance, getDispatchingAndroidInjectorOfObject());
+    return instance;
   }
 
   private static final class Builder implements AppComponent.Builder {
@@ -34,7 +85,31 @@ public final class DaggerAppComponent implements AppComponent {
     @Override
     public AppComponent build() {
       Preconditions.checkBuilderRequirement(application, Application.class);
-      return new DaggerAppComponent(application);
+      return new DaggerAppComponent(new AppModule(), application);
+    }
+  }
+
+  private final class SplashActivitySubcomponentFactory implements ActivityBuilder_ProvideSplashActivityInjector.SplashActivitySubcomponent.Factory {
+    @Override
+    public ActivityBuilder_ProvideSplashActivityInjector.SplashActivitySubcomponent create(
+        SplashActivity arg0) {
+      Preconditions.checkNotNull(arg0);
+      return new SplashActivitySubcomponentImpl(arg0);
+    }
+  }
+
+  private final class SplashActivitySubcomponentImpl implements ActivityBuilder_ProvideSplashActivityInjector.SplashActivitySubcomponent {
+    private SplashActivitySubcomponentImpl(SplashActivity arg0) {
+
+    }
+
+    @Override
+    public void inject(SplashActivity arg0) {
+      injectSplashActivity(arg0);}
+
+    private SplashActivity injectSplashActivity(SplashActivity instance) {
+      SplashActivity_MembersInjector.injectPreferenceManager(instance, DaggerAppComponent.this.providePreferenceManagerProvider.get());
+      return instance;
     }
   }
 }

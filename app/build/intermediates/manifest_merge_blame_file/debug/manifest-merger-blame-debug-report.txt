@@ -11,13 +11,13 @@
 9-->/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/AndroidManifest.xml
 10
 11    <application
-11-->/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/AndroidManifest.xml:5:5-22:19
+11-->/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/AndroidManifest.xml:5:5-23:19
 12        android:name="com.mobigod.shoppinglist.ShoppingListApp"
 12-->/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/AndroidManifest.xml:9:9-40
 13        android:allowBackup="true"
 13-->/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/AndroidManifest.xml:6:9-35
 14        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-14-->[androidx.core:core:1.1.0] /Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/302ac35464fe68900e7c70f9e2d36696/core-1.1.0/AndroidManifest.xml:24:18-86
+14-->[androidx.core:core:1.1.0] /Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/abd9f297d18970d80e0b59afa7f965a7/core-1.1.0/AndroidManifest.xml:24:18-86
 15        android:debuggable="true"
 16        android:icon="@mipmap/ic_launcher"
 16-->/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/AndroidManifest.xml:7:9-43
@@ -43,24 +43,27 @@
 25-->/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/AndroidManifest.xml:18:27-74
 26            </intent-filter>
 27        </activity>
-28
-29        <service
-29-->[androidx.room:room-runtime:2.2.1] /Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/6968da88aa22792d3b2bff5979e7e915/room-runtime-2.2.1/AndroidManifest.xml:25:9-27:40
-30            android:name="androidx.room.MultiInstanceInvalidationService"
-30-->[androidx.room:room-runtime:2.2.1] /Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/6968da88aa22792d3b2bff5979e7e915/room-runtime-2.2.1/AndroidManifest.xml:26:13-74
-31            android:exported="false" />
-31-->[androidx.room:room-runtime:2.2.1] /Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/6968da88aa22792d3b2bff5979e7e915/room-runtime-2.2.1/AndroidManifest.xml:27:13-37
-32
-33        <provider
-33-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/a20542452059b061f5f8a0e1e3c1919b/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:23:9-27:43
-34            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-34-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/a20542452059b061f5f8a0e1e3c1919b/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:24:13-79
-35            android:authorities="com.mobigod.shoppinglist.lifecycle-process"
-35-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/a20542452059b061f5f8a0e1e3c1919b/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:25:13-69
-36            android:exported="false"
-36-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/a20542452059b061f5f8a0e1e3c1919b/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:26:13-37
-37            android:multiprocess="true" />
-37-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/a20542452059b061f5f8a0e1e3c1919b/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:27:13-40
-38    </application>
-39
-40</manifest>
+28        <activity android:name="com.mobigod.shoppinglist.ui.home.HomeActivity" />
+28-->/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/AndroidManifest.xml:21:9-58
+28-->/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/AndroidManifest.xml:21:19-55
+29
+30        <service
+30-->[androidx.room:room-runtime:2.2.1] /Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/e43b4492dbc664741798285748e63d08/room-runtime-2.2.1/AndroidManifest.xml:25:9-27:40
+31            android:name="androidx.room.MultiInstanceInvalidationService"
+31-->[androidx.room:room-runtime:2.2.1] /Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/e43b4492dbc664741798285748e63d08/room-runtime-2.2.1/AndroidManifest.xml:26:13-74
+32            android:exported="false" />
+32-->[androidx.room:room-runtime:2.2.1] /Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/e43b4492dbc664741798285748e63d08/room-runtime-2.2.1/AndroidManifest.xml:27:13-37
+33
+34        <provider
+34-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/9005094b988e6026a13a28fda0dd8ac6/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:23:9-27:43
+35            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+35-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/9005094b988e6026a13a28fda0dd8ac6/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:24:13-79
+36            android:authorities="com.mobigod.shoppinglist.lifecycle-process"
+36-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/9005094b988e6026a13a28fda0dd8ac6/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:25:13-69
+37            android:exported="false"
+37-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/9005094b988e6026a13a28fda0dd8ac6/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:26:13-37
+38            android:multiprocess="true" />
+38-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/9005094b988e6026a13a28fda0dd8ac6/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:27:13-40
+39    </application>
+40
+41</manifest>

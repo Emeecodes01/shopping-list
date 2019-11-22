@@ -25,6 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.mobigod.shoppinglist.ui.home.HomeActivity" />
 
         <service
             android:name="androidx.room.MultiInstanceInvalidationService"

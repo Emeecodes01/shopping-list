@@ -2,7 +2,7 @@ package com.mobigod.shoppinglist.data
 
 import android.content.SharedPreferences
 
-class PreferenceManager(val sharedPreferences: SharedPreferences){
+open class PreferenceManager(val sharedPreferences: SharedPreferences) {
 
     var isFirstTime: Boolean = true
     set(value) {
