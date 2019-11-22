@@ -4,7 +4,6 @@ import org.junit.Assert.*
 
 import com.mobigod.shoppinglist.data.models.ShopItem
 import com.mobigod.shoppinglist.data.source.LocalDSContract
-import kotlinx.coroutines.test.TestCoroutineScope
 import kotlinx.coroutines.test.runBlockingTest
 import org.hamcrest.CoreMatchers.*
 import org.junit.Before
