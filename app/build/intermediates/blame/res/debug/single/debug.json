@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_chevron_left_black_24dp.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_chevron_left_black_24dp.png"
     },
     {
-        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_launcher_background.png"
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_invoice.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-ldpi/ic_invoice.png"
     },
     {
         "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_launcher_background.png.flat",
@@ -16,6 +16,110 @@
         "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
     },
     {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable_list_item_background.xml.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/drawable/list_item_background.xml"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_add_black_24dp.xml.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_add_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_add_black_24dp.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_add_black_24dp.png"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_chevron_left_black_24dp.xml.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_chevron_left_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_add_black_24dp.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-hdpi/ic_add_black_24dp.png"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_add_black_24dp.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-ldpi/ic_add_black_24dp.png"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_invoice.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_invoice.png"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_invoice.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-mdpi/ic_invoice.png"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/layout_activity_home.xml.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/layout/activity_home.xml"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_chevron_left_black_24dp.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_chevron_left_black_24dp.png"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_chevron_left_black_24dp.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-hdpi/ic_chevron_left_black_24dp.png"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_chevron_left_black_24dp.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-ldpi/ic_chevron_left_black_24dp.png"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_invoice.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_invoice.png"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/layout_shopping_item.xml.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/layout/shopping_item.xml"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_invoice.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-hdpi/ic_invoice.png"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/font_archivo_black.ttf.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/font/archivo_black.ttf"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_add_black_24dp.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_add_black_24dp.png"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_chevron_left_black_24dp.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_chevron_left_black_24dp.png"
+    },
+    {
         "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
@@ -24,32 +128,24 @@
         "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_launcher_background.png"
     },
     {
-        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_add_black_24dp.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_add_black_24dp.png"
     },
     {
         "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/mipmap-mdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_launcher_background.png.flat",
         "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-mdpi/ic_launcher_background.png"
     },
     {
-        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/layout_activity_home.xml.flat",
-        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/layout/activity_home.xml"
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_invoice.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_invoice.png"
     },
     {
         "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
@@ -60,6 +156,14 @@
         "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/layout_add_shopping_list.xml.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/layout/add_shopping_list.xml"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_chevron_left_black_24dp.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-mdpi/ic_chevron_left_black_24dp.png"
+    },
+    {
         "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
@@ -68,23 +172,19 @@
         "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/layout/activity_start.xml"
     },
     {
-        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/mipmap-hdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
-    },
-    {
         "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_launcher_background.png.flat",
         "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-hdpi/ic_launcher_background.png"
     },
     {
-        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher_background.png.flat",
-        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_launcher_background.png"
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_invoice.xml.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_invoice.xml"
     },
     {
         "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_launcher_background.xml.flat",
         "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_add_black_24dp.png.flat",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/generated/res/pngs/debug/drawable-mdpi/ic_add_black_24dp.png"
     }
 ]

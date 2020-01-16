@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarLayout"
+            app:elevation="0dp"
+            app:liftOnScroll="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:fitsSystemWindows="true"
+                app:title="Shopping List"
+                android:id="@+id/collapsing_tb"
+                app:titleEnabled="true"
+                app:expandedTitleTextAppearance="@style/expendedTextAppearance"
+                android:layout_height="match_parent"
+                app:contentScrim="@color/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <FrameLayout
+                    app:layout_collapseParallaxMultiplier="0.5"
+                    app:layout_collapseMode="parallax"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp">
+
+                </FrameLayout>
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/add_item_toolbar"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    android:layout_width="match_parent">
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/add_item_layout"
+            android:padding="16dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_below="@id/appbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/extFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="CLEAR"
+            app:icon="@android:drawable/ic_delete"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

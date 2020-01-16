@@ -22,8 +22,9 @@ class SplashActivity : AppCompatActivity() {
         Handler().postDelayed({
             if (preferenceManager.isFirstTime){
                 HomeActivity.start(this)
+                finish()
             }
-        }, 2000L)
+        }, 1000L)
 
     }
 }

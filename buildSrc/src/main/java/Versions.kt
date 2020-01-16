@@ -15,4 +15,6 @@ object Versions {
     const val stethoVersion = "1.5.1"
     const val googleMaterialVersion = "1.0.0"
     const val coroutineTestVersion = "1.3.2"
+    const val jodaTimeVersion = "2.10.3"
+    const val timePickerVersion = "4.2.3"
 }

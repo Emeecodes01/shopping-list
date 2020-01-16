@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_home.xml",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/layout/activity_home.xml"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/add_shopping_list.xml",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/layout/add_shopping_list.xml"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/shopping_item.xml",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/layout/shopping_item.xml"
+    },
+    {
+        "merged": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_start.xml",
+        "source": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/src/main/res/layout/activity_start.xml"
+    }
+]

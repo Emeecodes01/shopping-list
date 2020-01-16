@@ -5,11 +5,13 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
+import com.mobigod.shoppinglist.data.converters.DateTimeConverter
 import com.mobigod.shoppinglist.data.dao.ShopItemDAO
 import com.mobigod.shoppinglist.data.models.ShopItem
 
 
 @Database(entities = [ShopItem::class], version = 1)
+@TypeConverters(DateTimeConverter::class)
 abstract class ShoppingDb: RoomDatabase() {
     abstract fun shopItemDAO(): ShopItemDAO
 

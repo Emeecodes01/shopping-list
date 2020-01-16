@@ -8,12 +8,10 @@ import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject
 import kotlin.coroutines.coroutineContext
 
-class Repository @Inject constructor(val localDSContract: LocalDSContract): RepositoryContract{
+class Repository @Inject constructor(val localDSContract: LocalDSContract): RepositoryContract {
 
-
-    override suspend fun saveList(shopList: List<ShopItem>): Int {
+    override suspend fun saveList(shopList: List<ShopItem>): List<Long> {
         return localDSContract.saveShoppingList(shopList)
     }
-
 
 }

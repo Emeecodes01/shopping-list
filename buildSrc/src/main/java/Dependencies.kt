@@ -33,6 +33,7 @@ object Dependencies {
         val androidConstraintLayoutDep = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
         val googleMaterialDesign = "com.google.android.material:material:${Versions.googleMaterialVersion}"
         val recyclerView = "androidx.recyclerview:recyclerview:${Versions.googleMaterialVersion}"
+        val timeDatePicker = "com.wdullaer:materialdatetimepicker:${Versions.timePickerVersion}"
     }
 
     object Dagger2 {
@@ -65,6 +66,7 @@ object Dependencies {
 
     object DevTools{
         val stethoDep = "com.facebook.stetho:stetho:${Versions.stethoVersion}"
+        val jodaTimeDep = "net.danlew:android.joda:${Versions.jodaTimeVersion}"
     }
 
 }
@@ -86,6 +88,7 @@ fun DependencyHandler.UILibraries() {
     add("implementation", Dependencies.UIDependency.googleMaterialDesign)
     add("implementation", Dependencies.UIDependency.recyclerView)
     add("kapt", Dependencies.ImageLoadingLibraries.glideProcessor)
+    add("implementation", Dependencies.UIDependency.timeDatePicker)
 }
 
 fun DependencyHandler.DI() {
@@ -116,8 +119,10 @@ fun DependencyHandler.TestDependencies() {
     add("androidTestImplementation", Dependencies.TestDependencies.androidEspressoTestDep)
 }
 
+
 fun DependencyHandler.DevTools() {
     add("implementation", Dependencies.DevTools.stethoDep)
+    add("implementation", Dependencies.DevTools.jodaTimeDep)
 }
 
 fun DependencyHandler.appDependency() {

@@ -32,14 +32,14 @@ public final class ShoppingDb_Impl extends ShoppingDb {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `shop_item` (`uid` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `title` TEXT NOT NULL, `description` TEXT NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `shop_items_table` (`uuid` TEXT NOT NULL, `title` TEXT NOT NULL, `date_time` INTEGER NOT NULL, PRIMARY KEY(`uuid`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '732b3f67437de29075e5d3eec412846e')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd00af9b7138e75e3c89f46a97b435b32')");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("DROP TABLE IF EXISTS `shop_item`");
+        _db.execSQL("DROP TABLE IF EXISTS `shop_items_table`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -78,22 +78,22 @@ public final class ShoppingDb_Impl extends ShoppingDb {
 
       @Override
       protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsShopItem = new HashMap<String, TableInfo.Column>(3);
-        _columnsShopItem.put("uid", new TableInfo.Column("uid", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsShopItem.put("title", new TableInfo.Column("title", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsShopItem.put("description", new TableInfo.Column("description", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        final HashSet<TableInfo.ForeignKey> _foreignKeysShopItem = new HashSet<TableInfo.ForeignKey>(0);
-        final HashSet<TableInfo.Index> _indicesShopItem = new HashSet<TableInfo.Index>(0);
-        final TableInfo _infoShopItem = new TableInfo("shop_item", _columnsShopItem, _foreignKeysShopItem, _indicesShopItem);
-        final TableInfo _existingShopItem = TableInfo.read(_db, "shop_item");
-        if (! _infoShopItem.equals(_existingShopItem)) {
-          return new RoomOpenHelper.ValidationResult(false, "shop_item(com.mobigod.shoppinglist.data.models.ShopItem).\n"
-                  + " Expected:\n" + _infoShopItem + "\n"
-                  + " Found:\n" + _existingShopItem);
+        final HashMap<String, TableInfo.Column> _columnsShopItemsTable = new HashMap<String, TableInfo.Column>(3);
+        _columnsShopItemsTable.put("uuid", new TableInfo.Column("uuid", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsShopItemsTable.put("title", new TableInfo.Column("title", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsShopItemsTable.put("date_time", new TableInfo.Column("date_time", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysShopItemsTable = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesShopItemsTable = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoShopItemsTable = new TableInfo("shop_items_table", _columnsShopItemsTable, _foreignKeysShopItemsTable, _indicesShopItemsTable);
+        final TableInfo _existingShopItemsTable = TableInfo.read(_db, "shop_items_table");
+        if (! _infoShopItemsTable.equals(_existingShopItemsTable)) {
+          return new RoomOpenHelper.ValidationResult(false, "shop_items_table(com.mobigod.shoppinglist.data.models.ShopItem).\n"
+                  + " Expected:\n" + _infoShopItemsTable + "\n"
+                  + " Found:\n" + _existingShopItemsTable);
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "732b3f67437de29075e5d3eec412846e", "5adfad2ab163850d2d0ba2225f117658");
+    }, "d00af9b7138e75e3c89f46a97b435b32", "7f0368fe94f8d92fe98eba03398ebddd");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -106,7 +106,7 @@ public final class ShoppingDb_Impl extends ShoppingDb {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "shop_item");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "shop_items_table");
   }
 
   @Override
@@ -115,7 +115,7 @@ public final class ShoppingDb_Impl extends ShoppingDb {
     final SupportSQLiteDatabase _db = super.getOpenHelper().getWritableDatabase();
     try {
       super.beginTransaction();
-      _db.execSQL("DELETE FROM `shop_item`");
+      _db.execSQL("DELETE FROM `shop_items_table`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();

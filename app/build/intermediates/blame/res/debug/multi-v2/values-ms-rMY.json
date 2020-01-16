@@ -1,0 +1,37 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ms-rMY/values-ms-rMY.xml",
+            "map": [
+                {
+                    "source": "/Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/553b412aa86d4cc6887240c94b11a6f7/jetified-android.joda-2.10.3/res/values-ms-rMY/values-ms-rMY.xml",
+                    "from": {
+                        "startLines": "2,6,10,14,18,22,26,30,34,38,42,46,50,54,58,62,66,70,74,78,79,80",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,357,616,880,1143,1403,1671,1944,2216,2458,2706,2952,3197,3448,3706,3962,4214,4475,4742,5007,5137,5267",
+                        "endLines": "5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,78,79,80",
+                        "endColumns": "14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,129,129,150",
+                        "endOffsets": "352,611,875,1138,1398,1666,1939,2211,2453,2701,2947,3192,3443,3701,3957,4209,4470,4737,5002,5132,5262,5413"
+                    }
+                },
+                {
+                    "source": "/Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/edabe7f5b0f65137ed536f26ef8c39b5/jetified-materialdatetimepicker-4.2.3/res/values-ms-rMY/values-ms-rMY.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,166,232,334,449,531,644,762,879,974,1060,1150,1237",
+                        "endColumns": "60,65,101,114,81,112,117,116,94,85,89,86,100",
+                        "endOffsets": "161,227,329,444,526,639,757,874,969,1055,1145,1232,1333"
+                    },
+                    "to": {
+                        "startLines": "81,82,83,84,85,86,87,88,89,90,91,92,93",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "5418,5479,5545,5647,5762,5844,5957,6075,6192,6287,6373,6463,6550",
+                        "endColumns": "60,65,101,114,81,112,117,116,94,85,89,86,100",
+                        "endOffsets": "5474,5540,5642,5757,5839,5952,6070,6187,6282,6368,6458,6545,6646"
+                    }
+                }
+            ]
+        }
+    ]
+}

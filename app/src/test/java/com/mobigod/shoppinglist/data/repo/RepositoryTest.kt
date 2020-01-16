@@ -19,13 +19,13 @@ class RepositoryTest {
 
     lateinit var SUT: Repository
 
-    private val shoppingList = listOf (
-        ShopItem(uid = 1, name = "Shop1"),
-        ShopItem(uid = 2, name = "Shop2"),
-        ShopItem(uid = 3, name = "Shop3")
+    private val SHOPPING_LIST = listOf (
+        ShopItem(title = "Shop1", description = "description 01"),
+        ShopItem(title = "Shop2", description = "description 02"),
+        ShopItem(title = "Shop3", description = "description 03")
     )
 
-    private val shopItem = ShopItem(uid = 1, name = "Shop1")
+        // private val shopItem = ShopItem(uid = 1, name = "Shop1")
     private val SHOP_ITEM_SAVED_ITEM = 1
     private val SHOP_ITEM_SAVED_ITEM_FAILED = 0
 
@@ -44,19 +44,19 @@ class RepositoryTest {
 
     @Test
     fun `saveShoppingList correctParamsPassed`() = runBlockingTest{
-        SUT.saveList(shoppingList)
+        SUT.saveList(SHOPPING_LIST)
 
         verify(localDSContract, times(1))
             .saveShoppingList(argumentCaptor.capture())
 
-        assertThat(shoppingList, `is`(argumentCaptor.value))
+        assertThat(SHOPPING_LIST, `is`(argumentCaptor.value))
     }
 
 
     @Test
     fun `saveShoppingList successful`() = runBlockingTest {
         `save items successful`()
-        val result = SUT.saveList(shoppingList)
+        val result = SUT.saveList(SHOPPING_LIST)
         assertThat(result, `is`(SHOP_ITEM_SAVED_ITEM))
     }
 
@@ -65,7 +65,7 @@ class RepositoryTest {
     fun `saveShoppingList failed`() = runBlockingTest {
         `save items failure`()
 
-        val result = SUT.saveList(shoppingList)
+        val result = SUT.saveList(SHOPPING_LIST)
         assertThat(result, `is`(SHOP_ITEM_SAVED_ITEM_FAILED))
     }
 

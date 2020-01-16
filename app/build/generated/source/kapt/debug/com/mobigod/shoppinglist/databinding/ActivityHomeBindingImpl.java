@@ -14,24 +14,32 @@ public class ActivityHomeBindingImpl extends ActivityHomeBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.list_rv, 1);
+        sViewsWithIds.put(R.id.appbarLayout, 1);
+        sViewsWithIds.put(R.id.collapsing_tb, 2);
+        sViewsWithIds.put(R.id.main_toolbar, 3);
+        sViewsWithIds.put(R.id.shoppinglist_rv, 4);
+        sViewsWithIds.put(R.id.add_shop_list, 5);
     }
     // views
     @NonNull
-    private final android.widget.RelativeLayout mboundView0;
+    private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
     // variables
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public ActivityHomeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 2, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
     }
     private ActivityHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (androidx.recyclerview.widget.RecyclerView) bindings[1]
+            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[5]
+            , (com.google.android.material.appbar.AppBarLayout) bindings[1]
+            , (com.google.android.material.appbar.CollapsingToolbarLayout) bindings[2]
+            , (androidx.appcompat.widget.Toolbar) bindings[3]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[4]
             );
-        this.mboundView0 = (android.widget.RelativeLayout) bindings[0];
+        this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners

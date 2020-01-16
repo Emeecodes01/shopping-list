@@ -8,6 +8,7 @@ import androidx.room.RoomSQLiteQuery;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
+import com.mobigod.shoppinglist.data.converters.DateTimeConverter;
 import com.mobigod.shoppinglist.data.models.ShopItem;
 import java.lang.Exception;
 import java.lang.Long;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
 import kotlin.coroutines.Continuation;
+import org.joda.time.DateTime;
 
 @SuppressWarnings({"unchecked", "deprecation"})
 public final class ShopItemDAO_Impl implements ShopItemDAO {
@@ -26,26 +28,34 @@ public final class ShopItemDAO_Impl implements ShopItemDAO {
 
   private final EntityInsertionAdapter<ShopItem> __insertionAdapterOfShopItem;
 
+  private final DateTimeConverter __dateTimeConverter = new DateTimeConverter();
+
   public ShopItemDAO_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfShopItem = new EntityInsertionAdapter<ShopItem>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `shop_item` (`uid`,`title`,`description`) VALUES (nullif(?, 0),?,?)";
+        return "INSERT OR REPLACE INTO `shop_items_table` (`uuid`,`title`,`date_time`) VALUES (?,?,?)";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, ShopItem value) {
-        stmt.bindLong(1, value.getUid());
+        if (value.getUuid() == null) {
+          stmt.bindNull(1);
+        } else {
+          stmt.bindString(1, value.getUuid());
+        }
         if (value.getTitle() == null) {
           stmt.bindNull(2);
         } else {
           stmt.bindString(2, value.getTitle());
         }
-        if (value.getDescription() == null) {
+        final Long _tmp;
+        _tmp = __dateTimeConverter.toLong(value.getDateTime());
+        if (_tmp == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindString(3, value.getDescription());
+          stmt.bindLong(3, _tmp);
         }
       }
     };
@@ -71,26 +81,32 @@ public final class ShopItemDAO_Impl implements ShopItemDAO {
 
   @Override
   public Object getShopItems(final Continuation<? super List<ShopItem>> p0) {
-    final String _sql = "SELECT*FROM shop_item";
+    final String _sql = "SELECT*FROM shop_items_table";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     return CoroutinesRoom.execute(__db, false, new Callable<List<ShopItem>>() {
       @Override
       public List<ShopItem> call() throws Exception {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
-          final int _cursorIndexOfUid = CursorUtil.getColumnIndexOrThrow(_cursor, "uid");
+          final int _cursorIndexOfUuid = CursorUtil.getColumnIndexOrThrow(_cursor, "uuid");
           final int _cursorIndexOfTitle = CursorUtil.getColumnIndexOrThrow(_cursor, "title");
-          final int _cursorIndexOfDescription = CursorUtil.getColumnIndexOrThrow(_cursor, "description");
+          final int _cursorIndexOfDateTime = CursorUtil.getColumnIndexOrThrow(_cursor, "date_time");
           final List<ShopItem> _result = new ArrayList<ShopItem>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final ShopItem _item;
-            final int _tmpUid;
-            _tmpUid = _cursor.getInt(_cursorIndexOfUid);
+            final String _tmpUuid;
+            _tmpUuid = _cursor.getString(_cursorIndexOfUuid);
             final String _tmpTitle;
             _tmpTitle = _cursor.getString(_cursorIndexOfTitle);
-            final String _tmpDescription;
-            _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
-            _item = new ShopItem(_tmpUid,_tmpTitle,_tmpDescription);
+            final DateTime _tmpDateTime;
+            final Long _tmp;
+            if (_cursor.isNull(_cursorIndexOfDateTime)) {
+              _tmp = null;
+            } else {
+              _tmp = _cursor.getLong(_cursorIndexOfDateTime);
+            }
+            _tmpDateTime = __dateTimeConverter.toDate(_tmp);
+            _item = new ShopItem(_tmpUuid,_tmpTitle,_tmpDateTime);
             _result.add(_item);
           }
           return _result;
@@ -104,7 +120,7 @@ public final class ShopItemDAO_Impl implements ShopItemDAO {
 
   @Override
   public Object getShopItemByName(final String name, final Continuation<? super ShopItem> p1) {
-    final String _sql = "SELECT * FROM shop_item WHERE title =? LIMIT 1";
+    final String _sql = "SELECT * FROM shop_items_table WHERE title =? LIMIT 1";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     if (name == null) {
@@ -117,18 +133,24 @@ public final class ShopItemDAO_Impl implements ShopItemDAO {
       public ShopItem call() throws Exception {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
-          final int _cursorIndexOfUid = CursorUtil.getColumnIndexOrThrow(_cursor, "uid");
+          final int _cursorIndexOfUuid = CursorUtil.getColumnIndexOrThrow(_cursor, "uuid");
           final int _cursorIndexOfTitle = CursorUtil.getColumnIndexOrThrow(_cursor, "title");
-          final int _cursorIndexOfDescription = CursorUtil.getColumnIndexOrThrow(_cursor, "description");
+          final int _cursorIndexOfDateTime = CursorUtil.getColumnIndexOrThrow(_cursor, "date_time");
           final ShopItem _result;
           if(_cursor.moveToFirst()) {
-            final int _tmpUid;
-            _tmpUid = _cursor.getInt(_cursorIndexOfUid);
+            final String _tmpUuid;
+            _tmpUuid = _cursor.getString(_cursorIndexOfUuid);
             final String _tmpTitle;
             _tmpTitle = _cursor.getString(_cursorIndexOfTitle);
-            final String _tmpDescription;
-            _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
-            _result = new ShopItem(_tmpUid,_tmpTitle,_tmpDescription);
+            final DateTime _tmpDateTime;
+            final Long _tmp;
+            if (_cursor.isNull(_cursorIndexOfDateTime)) {
+              _tmp = null;
+            } else {
+              _tmp = _cursor.getLong(_cursorIndexOfDateTime);
+            }
+            _tmpDateTime = __dateTimeConverter.toDate(_tmp);
+            _result = new ShopItem(_tmpUuid,_tmpTitle,_tmpDateTime);
           } else {
             _result = null;
           }

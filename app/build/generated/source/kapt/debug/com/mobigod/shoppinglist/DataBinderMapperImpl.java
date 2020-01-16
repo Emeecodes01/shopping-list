@@ -7,6 +7,9 @@ import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
 import com.mobigod.shoppinglist.databinding.ActivityHomeBindingImpl;
+import com.mobigod.shoppinglist.databinding.ActivityStartBindingImpl;
+import com.mobigod.shoppinglist.databinding.AddShoppingListBindingImpl;
+import com.mobigod.shoppinglist.databinding.ShoppingItemBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
 import java.lang.Object;
@@ -20,10 +23,19 @@ import java.util.List;
 public class DataBinderMapperImpl extends DataBinderMapper {
   private static final int LAYOUT_ACTIVITYHOME = 1;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(1);
+  private static final int LAYOUT_ACTIVITYSTART = 2;
+
+  private static final int LAYOUT_ADDSHOPPINGLIST = 3;
+
+  private static final int LAYOUT_SHOPPINGITEM = 4;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(4);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.mobigod.shoppinglist.R.layout.activity_home, LAYOUT_ACTIVITYHOME);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.mobigod.shoppinglist.R.layout.activity_start, LAYOUT_ACTIVITYSTART);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.mobigod.shoppinglist.R.layout.add_shopping_list, LAYOUT_ADDSHOPPINGLIST);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.mobigod.shoppinglist.R.layout.shopping_item, LAYOUT_SHOPPINGITEM);
   }
 
   @Override
@@ -40,6 +52,24 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ActivityHomeBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_home is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ACTIVITYSTART: {
+          if ("layout/activity_start_0".equals(tag)) {
+            return new ActivityStartBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_start is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ADDSHOPPINGLIST: {
+          if ("layout/add_shopping_list_0".equals(tag)) {
+            return new AddShoppingListBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for add_shopping_list is invalid. Received: " + tag);
+        }
+        case  LAYOUT_SHOPPINGITEM: {
+          if ("layout/shopping_item_0".equals(tag)) {
+            return new ShoppingItemBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for shopping_item is invalid. Received: " + tag);
         }
       }
     }
@@ -86,18 +116,22 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(1);
+    static final SparseArray<String> sKeys = new SparseArray<String>(2);
 
     static {
       sKeys.put(0, "_all");
+      sKeys.put(1, "shopItem");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(1);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(4);
 
     static {
       sKeys.put("layout/activity_home_0", com.mobigod.shoppinglist.R.layout.activity_home);
+      sKeys.put("layout/activity_start_0", com.mobigod.shoppinglist.R.layout.activity_start);
+      sKeys.put("layout/add_shopping_list_0", com.mobigod.shoppinglist.R.layout.add_shopping_list);
+      sKeys.put("layout/shopping_item_0", com.mobigod.shoppinglist.R.layout.shopping_item);
     }
   }
 }

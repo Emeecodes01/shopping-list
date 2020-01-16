@@ -7,13 +7,12 @@ import javax.inject.Inject
 
 class LocalDataSource @Inject constructor(val preferenceManager: PreferenceManager, val db: ShoppingDb):
     LocalDSContract {
-    override suspend fun saveShoppingList(list: List<ShopItem>?): Int {
-        return 1
+    override suspend fun saveShoppingList(list: List<ShopItem>?): List<Long> {
+        return db.shopItemDAO().saveShopItems(list)
     }
 
     override suspend fun getShoppingList(): List<ShopItem> {
         return emptyList()
     }
-
 
 }

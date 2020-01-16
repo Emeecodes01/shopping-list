@@ -10,11 +10,11 @@ import com.mobigod.shoppinglist.data.models.ShopItem
 interface ShopItemDAO {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveShopItems(items: List<ShopItem>): List<Long>
+    suspend fun saveShopItems(items: List<ShopItem>?): List<Long>
 
-    @Query("SELECT*FROM shop_item")
+    @Query("SELECT*FROM shop_items_table")
     suspend fun getShopItems(): List<ShopItem>
 
-    @Query("SELECT * FROM shop_item WHERE title =:name LIMIT 1")
+    @Query("SELECT * FROM shop_items_table WHERE title =:name LIMIT 1")
     suspend fun getShopItemByName(name: String): ShopItem
 }

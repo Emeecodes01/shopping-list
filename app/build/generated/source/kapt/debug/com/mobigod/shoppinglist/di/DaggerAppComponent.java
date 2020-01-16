@@ -9,11 +9,14 @@ import com.mobigod.shoppinglist.ShoppingListApp_MembersInjector;
 import com.mobigod.shoppinglist.SplashActivity;
 import com.mobigod.shoppinglist.SplashActivity_MembersInjector;
 import com.mobigod.shoppinglist.data.PreferenceManager;
+import com.mobigod.shoppinglist.ui.home.HomeActivity;
+import com.mobigod.shoppinglist.ui.shopping.activities.AddShoppingListActivity;
 import dagger.android.AndroidInjector;
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.DispatchingAndroidInjector_Factory;
 import dagger.internal.DoubleCheck;
 import dagger.internal.InstanceFactory;
+import dagger.internal.MapBuilder;
 import dagger.internal.Preconditions;
 import java.util.Collections;
 import java.util.Map;
@@ -25,6 +28,10 @@ import javax.inject.Provider;
 })
 public final class DaggerAppComponent implements AppComponent {
   private Provider<ActivityBuilder_ProvideSplashActivityInjector.SplashActivitySubcomponent.Factory> splashActivitySubcomponentFactoryProvider;
+
+  private Provider<ActivityBuilder_ProvideHomeActivityInjector.HomeActivitySubcomponent.Factory> homeActivitySubcomponentFactoryProvider;
+
+  private Provider<ActivityBuilder_ProvideAddShoppingListInjector.AddShoppingListActivitySubcomponent.Factory> addShoppingListActivitySubcomponentFactoryProvider;
 
   private Provider<Application> applicationProvider;
 
@@ -45,7 +52,7 @@ public final class DaggerAppComponent implements AppComponent {
 
   private Map<Class<?>, Provider<AndroidInjector.Factory<?>>> getMapOfClassOfAndProviderOfAndroidInjectorFactoryOf(
       ) {
-    return Collections.<Class<?>, Provider<AndroidInjector.Factory<?>>>singletonMap(SplashActivity.class, (Provider) splashActivitySubcomponentFactoryProvider);}
+    return MapBuilder.<Class<?>, Provider<AndroidInjector.Factory<?>>>newMapBuilder(3).put(SplashActivity.class, (Provider) splashActivitySubcomponentFactoryProvider).put(HomeActivity.class, (Provider) homeActivitySubcomponentFactoryProvider).put(AddShoppingListActivity.class, (Provider) addShoppingListActivitySubcomponentFactoryProvider).build();}
 
   private DispatchingAndroidInjector<Object> getDispatchingAndroidInjectorOfObject() {
     return DispatchingAndroidInjector_Factory.newInstance(getMapOfClassOfAndProviderOfAndroidInjectorFactoryOf(), Collections.<String, Provider<AndroidInjector.Factory<?>>>emptyMap());}
@@ -57,6 +64,17 @@ public final class DaggerAppComponent implements AppComponent {
       public ActivityBuilder_ProvideSplashActivityInjector.SplashActivitySubcomponent.Factory get(
           ) {
         return new SplashActivitySubcomponentFactory();}
+    };
+    this.homeActivitySubcomponentFactoryProvider = new Provider<ActivityBuilder_ProvideHomeActivityInjector.HomeActivitySubcomponent.Factory>() {
+      @Override
+      public ActivityBuilder_ProvideHomeActivityInjector.HomeActivitySubcomponent.Factory get() {
+        return new HomeActivitySubcomponentFactory();}
+    };
+    this.addShoppingListActivitySubcomponentFactoryProvider = new Provider<ActivityBuilder_ProvideAddShoppingListInjector.AddShoppingListActivitySubcomponent.Factory>() {
+      @Override
+      public ActivityBuilder_ProvideAddShoppingListInjector.AddShoppingListActivitySubcomponent.Factory get(
+          ) {
+        return new AddShoppingListActivitySubcomponentFactory();}
     };
     this.applicationProvider = InstanceFactory.create(applicationParam);
     this.provideContextProvider = DoubleCheck.provider(AppModule_ProvideContextFactory.create(appModuleParam, applicationProvider));
@@ -110,6 +128,44 @@ public final class DaggerAppComponent implements AppComponent {
     private SplashActivity injectSplashActivity(SplashActivity instance) {
       SplashActivity_MembersInjector.injectPreferenceManager(instance, DaggerAppComponent.this.providePreferenceManagerProvider.get());
       return instance;
+    }
+  }
+
+  private final class HomeActivitySubcomponentFactory implements ActivityBuilder_ProvideHomeActivityInjector.HomeActivitySubcomponent.Factory {
+    @Override
+    public ActivityBuilder_ProvideHomeActivityInjector.HomeActivitySubcomponent create(
+        HomeActivity arg0) {
+      Preconditions.checkNotNull(arg0);
+      return new HomeActivitySubcomponentImpl(arg0);
+    }
+  }
+
+  private final class HomeActivitySubcomponentImpl implements ActivityBuilder_ProvideHomeActivityInjector.HomeActivitySubcomponent {
+    private HomeActivitySubcomponentImpl(HomeActivity arg0) {
+
+    }
+
+    @Override
+    public void inject(HomeActivity arg0) {
+    }
+  }
+
+  private final class AddShoppingListActivitySubcomponentFactory implements ActivityBuilder_ProvideAddShoppingListInjector.AddShoppingListActivitySubcomponent.Factory {
+    @Override
+    public ActivityBuilder_ProvideAddShoppingListInjector.AddShoppingListActivitySubcomponent create(
+        AddShoppingListActivity arg0) {
+      Preconditions.checkNotNull(arg0);
+      return new AddShoppingListActivitySubcomponentImpl(arg0);
+    }
+  }
+
+  private final class AddShoppingListActivitySubcomponentImpl implements ActivityBuilder_ProvideAddShoppingListInjector.AddShoppingListActivitySubcomponent {
+    private AddShoppingListActivitySubcomponentImpl(AddShoppingListActivity arg0) {
+
+    }
+
+    @Override
+    public void inject(AddShoppingListActivity arg0) {
     }
   }
 }

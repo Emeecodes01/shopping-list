@@ -4,7 +4,7 @@
             "outputFile": "/Users/emmanuelmac/Desktop/Personal/6monthsjapa/Android practises/ShoppingList/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ur/values-ur.xml",
             "map": [
                 {
-                    "source": "/Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/abd9f297d18970d80e0b59afa7f965a7/core-1.1.0/res/values-ur/values-ur.xml",
+                    "source": "/Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/b4752499b3b066c193ebe08259213b94/core-1.1.0/res/values-ur/values-ur.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/aeffde13a8d0566779c93d66394e3c69/appcompat-1.1.0/res/values-ur/values-ur.xml",
+                    "source": "/Users/emmanuelmac/.gradle/caches/transforms-2/files-2.1/7cec11bb25f065056fa213af4dd6b502/appcompat-1.1.0/res/values-ur/values-ur.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

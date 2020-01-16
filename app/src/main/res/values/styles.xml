@@ -8,4 +8,29 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Material" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+    </style>
+
+    <style name="NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="NoStatusBar" parent="NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="toolbarStyle" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:background">@color/toolbar_background</item>
+        <item name="colorControlNormal">@color/toolbar_background</item>
+    </style>
+
+    <style name="expendedTextAppearance">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/black50</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+
 </resources>
